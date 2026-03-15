@@ -230,8 +230,13 @@
       flex-wrap:wrap;
     }
 
+    .exp-head > div{
+      min-width:0;
+      flex:1 1 320px;
+    }
+
     .exp-role{color:#b8c6d8}
-    .exp-period{color:#7f90a8;font-size:14px}
+    .exp-period{color:#7f90a8;font-size:14px;flex:0 0 auto;text-align:right}
 
     .tech-title{
       margin-top:22px;
@@ -350,6 +355,7 @@
     }
 
     @media (max-width: 640px){
+      .exp-period{width:100%;text-align:left;margin-top:4px}
       .container,
       .topbar{
         width:min(var(--max), calc(100% - 24px));
@@ -453,7 +459,7 @@
       <div class="card exp-card" style="margin-bottom:18px;">
         <div class="exp-head">
           <div>
-            <h3>Kolay Gelsin</h3>
+            <h3>Kolay Gelsin Inc</h3>
             <p class="exp-role">Senior System Infrastructure Expert</p>
           </div>
           <p class="exp-period">2023 – 2025</p>
@@ -525,10 +531,12 @@
         </div>
       </div>
 
+      
+
       <div class="card exp-card">
         <div class="exp-head">
           <div>
-            <h3>DenizBank</h3>
+            <h3>DenizBank Inc</h3>
             <p class="exp-role">System Administrator</p>
           </div>
           <p class="exp-period">2017 – 2019</p>
@@ -537,6 +545,22 @@
         <div class="techs">
           <span class="tech">Enterprise Infrastructure</span>
           <span class="tech">VIP Support</span>
+        </div>
+      </div>
+
+      <div class="card exp-card">
+        <div class="exp-head">
+          <div>
+            <h3>Acıbadem Healthcare Group</h3>
+            <p class="exp-role">Information Technology Specialist</p>
+          </div>
+          <p class="exp-period">2013 – 2016</p>
+        </div>
+        <div class="tech-title">Technologies</div>
+        <div class="techs">
+          <span class="tech">Enterprise Infrastructure</span>
+          <span class="tech">Windows Systems</span>
+          <span class="tech">Operational Support</span>
         </div>
       </div>
     </div>
