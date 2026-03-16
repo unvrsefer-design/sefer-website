@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sefer Ünüvar | Senior Infrastructure & Cloud Engineer</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="shortcut icon" href="/favicon.ico">
   <meta
     name="description"
     content="Senior Infrastructure & Cloud Engineer specializing in hybrid infrastructure, Azure, Microsoft 365, migration programs, and enterprise operations."
@@ -531,9 +532,7 @@
         </div>
       </div>
 
-      
-
-      <div class="card exp-card">
+      <div class="card exp-card" style="margin-bottom:18px;">
         <div class="exp-head">
           <div>
             <h3>DenizBank Inc</h3>
@@ -571,7 +570,7 @@
       <div class="card resume-box">
         <h2 class="section-title" style="margin-bottom:14px;">Resume</h2>
         <p>Recruiters can download my resume directly.</p>
-        <a class="btn" href="/Sefer-Unuvar-CV.pdf" download onclick="trackResumeDownload()">Download Resume</a>
+        <a class="btn" href="/api/resume">Download Resume</a>
       </div>
     </div>
   </section>
@@ -637,9 +636,6 @@
     }, { rootMargin: '-35% 0px -45% 0px', threshold: 0.15 });
 
     sections.forEach(section => section && observer.observe(section));
-
-    function trackResumeDownload() {
-      fetch('/api/resume', {
   </script>
 </body>
 </html>
