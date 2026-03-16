@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sefer Ünüvar | Senior Infrastructure & Cloud Engineer</title>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="shortcut icon" href="/favicon.ico">
   <meta
     name="description"
     content="Senior Infrastructure & Cloud Engineer specializing in hybrid infrastructure, Azure, Microsoft 365, migration programs, and enterprise operations."
   />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="%23020617"/%3E%3Ctext x="50%25" y="56%25" text-anchor="middle" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="%2338bdf8"%3ES%3C/text%3E%3C/svg%3E'>
+  <link rel="shortcut icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="%23020617"/%3E%3Ctext x="50%25" y="56%25" text-anchor="middle" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="%2338bdf8"%3ES%3C/text%3E%3C/svg%3E'>
   <style>
     :root{
       --bg:#020617;
@@ -23,13 +23,14 @@
       --shadow:0 10px 40px rgba(2,6,23,.45);
       --radius:22px;
       --max:1180px;
+      --nav-offset:96px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
         radial-gradient(circle at top right, rgba(56,189,248,.14), transparent 22%),
         radial-gradient(circle at bottom left, rgba(125,211,252,.08), transparent 22%),
@@ -48,7 +49,7 @@
       top:0;
       z-index:1000;
       background:rgba(2,6,23,.92);
-      backdrop-filter: blur(12px);
+      backdrop-filter:blur(12px);
       padding:18px 0 12px;
     }
 
@@ -89,12 +90,14 @@
     section{
       position:relative;
       border-top:1px solid rgba(148,163,184,.08);
+      scroll-margin-top:var(--nav-offset);
     }
 
     .hero{
       border-top:none;
       border-bottom:1px solid rgba(148,163,184,.08);
       overflow:hidden;
+      scroll-margin-top:0;
     }
 
     .hero-inner{
@@ -167,13 +170,10 @@
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:0 0 0 1px rgba(14,165,233,.03);
-      backdrop-filter: blur(8px);
+      backdrop-filter:blur(8px);
     }
 
-    .stat{
-      padding:24px;
-    }
-
+    .stat{padding:24px}
     .stat strong{
       display:block;
       color:var(--accent-2);
@@ -181,7 +181,6 @@
       line-height:1;
       font-weight:700;
     }
-
     .stat span{
       display:block;
       margin-top:10px;
@@ -189,10 +188,7 @@
       font-size:14px;
     }
 
-    .section-inner{
-      padding:80px 0;
-    }
-
+    .section-inner{padding:80px 0}
     .section-title{
       color:var(--accent-2);
       font-size:34px;
@@ -206,22 +202,10 @@
       gap:22px;
     }
 
-    .work-card,.exp-card,.resume-box,.contact-card,.recruiter-box{
-      padding:28px;
-    }
-
-    .work-card h3,.exp-card h3{
-      font-size:24px;
-      margin-bottom:14px;
-    }
-
-    .work-card p,.exp-role,.exp-period,.resume-box p,.recruiter-box p,.contact-card p{
-      line-height:1.8;
-    }
-
-    .work-card p,.resume-box p,.recruiter-box p{
-      color:var(--muted);
-    }
+    .work-card,.exp-card,.resume-box,.contact-card,.recruiter-box{padding:28px}
+    .work-card h3,.exp-card h3{font-size:24px;margin-bottom:14px}
+    .work-card p,.exp-role,.exp-period,.resume-box p,.recruiter-box p,.contact-card p{line-height:1.8}
+    .work-card p,.resume-box p,.recruiter-box p{color:var(--muted)}
 
     .exp-head{
       display:flex;
@@ -230,12 +214,10 @@
       align-items:flex-start;
       flex-wrap:wrap;
     }
-
     .exp-head > div{
       min-width:0;
       flex:1 1 320px;
     }
-
     .exp-role{color:#b8c6d8}
     .exp-period{color:#7f90a8;font-size:14px;flex:0 0 auto;text-align:right}
 
@@ -248,12 +230,7 @@
       font-size:12px;
     }
 
-    .techs{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
+    .techs{display:flex;flex-wrap:wrap;gap:10px}
     .tech{
       padding:8px 12px;
       border-radius:999px;
@@ -262,12 +239,7 @@
       font-size:12px;
     }
 
-    .resume-box,.recruiter-box{
-      text-align:center;
-      max-width:860px;
-      margin:0 auto;
-    }
-
+    .resume-box,.recruiter-box{text-align:center;max-width:860px;margin:0 auto}
     .btn{
       display:inline-block;
       margin-top:26px;
@@ -279,12 +251,7 @@
       font-weight:600;
       transition:.2s ease;
     }
-
-    .btn:hover{
-      background:rgba(8,47,73,.55);
-      transform:translateY(-1px);
-    }
-
+    .btn:hover{background:rgba(8,47,73,.55);transform:translateY(-1px)}
     .recruiter-box p + p{margin-top:16px}
 
     .contact-grid{
@@ -293,14 +260,12 @@
       gap:18px;
       margin-top:28px;
     }
-
     .contact-card small{
       display:block;
       color:#7f90a8;
       margin-bottom:10px;
       font-size:13px;
     }
-
     .contact-card a,.contact-card span{
       color:#dff4ff;
       font-size:14px;
@@ -310,7 +275,6 @@
       overflow:hidden;
       text-overflow:ellipsis;
     }
-
     .contact-note{
       margin-top:24px;
       max-width:700px;
@@ -318,54 +282,46 @@
       line-height:1.8;
     }
 
-    .glow-left::before,
-    .glow-right::before{
+    .glow-left::before,.glow-right::before{
       content:"";
       position:absolute;
       inset:0;
       pointer-events:none;
       opacity:.9;
     }
-
     .glow-left::before{
       background:
         radial-gradient(circle at top left, rgba(56,189,248,.10), transparent 28%),
         radial-gradient(circle at bottom right, rgba(125,211,252,.08), transparent 24%);
     }
-
     .glow-right::before{
       background:
         radial-gradient(circle at top right, rgba(56,189,248,.10), transparent 28%),
         radial-gradient(circle at bottom left, rgba(125,211,252,.08), transparent 24%);
     }
 
+    .copyright{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+      padding:0 0 28px;
+      color:#7f90a8;
+      font-size:13px;
+      line-height:1.8;
+    }
+
     @media (max-width: 980px){
-      .hero-inner,.grid-2,.contact-grid{
-        grid-template-columns:1fr;
-      }
-      .stats{
-        margin-top:8px;
-      }
-      .topbar{
-        justify-content:center;
-      }
-      .nav{
-        justify-content:center;
-        gap:16px;
-      }
+      .hero-inner,.grid-2,.contact-grid{grid-template-columns:1fr}
+      .stats{margin-top:8px}
+      .topbar{justify-content:center}
+      .nav{justify-content:center;gap:16px}
     }
 
     @media (max-width: 640px){
       .exp-period{width:100%;text-align:left;margin-top:4px}
-      .container,
-      .topbar{
-        width:min(var(--max), calc(100% - 24px));
-      }
+      .container,.topbar,.copyright{width:min(var(--max), calc(100% - 24px))}
       .section-inner{padding:60px 0}
       .hero-inner{padding:38px 0 64px}
-      .work-card,.exp-card,.resume-box,.contact-card,.recruiter-box,.stat{
-        padding:22px;
-      }
+      .work-card,.exp-card,.resume-box,.contact-card,.recruiter-box,.stat{padding:22px}
       .nav a{font-size:13px}
     }
   </style>
@@ -409,22 +365,10 @@
       </div>
 
       <div class="stats">
-        <div class="card stat">
-          <strong>15+</strong>
-          <span>Years in Infrastructure</span>
-        </div>
-        <div class="card stat">
-          <strong>300+</strong>
-          <span>Servers Operated</span>
-        </div>
-        <div class="card stat">
-          <strong>1000+</strong>
-          <span>Users Migrated</span>
-        </div>
-        <div class="card stat">
-          <strong>2</strong>
-          <span>M365 Tenants Migrated</span>
-        </div>
+        <div class="card stat"><strong>15+</strong><span>Years in Infrastructure</span></div>
+        <div class="card stat"><strong>300+</strong><span>Servers Operated</span></div>
+        <div class="card stat"><strong>1000+</strong><span>Users Migrated</span></div>
+        <div class="card stat"><strong>2</strong><span>M365 Tenants Migrated</span></div>
       </div>
     </div>
   </section>
@@ -458,109 +402,39 @@
       <h2 class="section-title">Experience</h2>
 
       <div class="card exp-card" style="margin-bottom:18px;">
-        <div class="exp-head">
-          <div>
-            <h3>Kolay Gelsin Inc</h3>
-            <p class="exp-role">Senior System Infrastructure Expert</p>
-          </div>
-          <p class="exp-period">2023 – 2025</p>
-        </div>
+        <div class="exp-head"><div><h3>Kolay Gelsin Inc</h3><p class="exp-role">Senior System Infrastructure Expert</p></div><p class="exp-period">2023 – 2025</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">Azure</span>
-          <span class="tech">Microsoft 365</span>
-          <span class="tech">Entra ID</span>
-          <span class="tech">Active Directory</span>
-          <span class="tech">Migration</span>
-          <span class="tech">Elastic Stack</span>
-          <span class="tech">Trend Micro Proxy</span>
-        </div>
+        <div class="techs"><span class="tech">Azure</span><span class="tech">Microsoft 365</span><span class="tech">Entra ID</span><span class="tech">Active Directory</span><span class="tech">Migration</span><span class="tech">Elastic Stack</span><span class="tech">Trend Micro Proxy</span></div>
       </div>
 
       <div class="card exp-card" style="margin-bottom:18px;">
-        <div class="exp-head">
-          <div>
-            <h3>Ekol Logistics / Logiverse</h3>
-            <p class="exp-role">System & Monitoring Expert</p>
-          </div>
-          <p class="exp-period">2023 – 2025</p>
-        </div>
+        <div class="exp-head"><div><h3>Ekol Logistics / Logiverse</h3><p class="exp-role">System & Monitoring Expert</p></div><p class="exp-period">2023 – 2025</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">Active Directory</span>
-          <span class="tech">Elasticsearch</span>
-          <span class="tech">Google Workspace</span>
-          <span class="tech">Zabbix</span>
-          <span class="tech">SolarWinds</span>
-          <span class="tech">Monitoring</span>
-        </div>
+        <div class="techs"><span class="tech">Active Directory</span><span class="tech">Elasticsearch</span><span class="tech">Google Workspace</span><span class="tech">Zabbix</span><span class="tech">SolarWinds</span><span class="tech">Monitoring</span></div>
       </div>
 
       <div class="card exp-card" style="margin-bottom:18px;">
-        <div class="exp-head">
-          <div>
-            <h3>NGN Information Technologies</h3>
-            <p class="exp-role">Infrastructure & Virtualization Specialist</p>
-          </div>
-          <p class="exp-period">2021 – 2023</p>
-        </div>
+        <div class="exp-head"><div><h3>NGN Information Technologies</h3><p class="exp-role">Infrastructure & Virtualization Specialist</p></div><p class="exp-period">2021 – 2023</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">VMware</span>
-          <span class="tech">Microsoft Server Infrastructure</span>
-          <span class="tech">SCCM</span>
-          <span class="tech">Backup</span>
-        </div>
+        <div class="techs"><span class="tech">VMware</span><span class="tech">Microsoft Server Infrastructure</span><span class="tech">SCCM</span><span class="tech">Backup</span></div>
       </div>
 
       <div class="card exp-card" style="margin-bottom:18px;">
-        <div class="exp-head">
-          <div>
-            <h3>Ünlü Investment</h3>
-            <p class="exp-role">Infrastructure & Virtualization Specialist</p>
-          </div>
-          <p class="exp-period">2019 – 2021</p>
-        </div>
+        <div class="exp-head"><div><h3>Ünlü Investment</h3><p class="exp-role">Infrastructure & Virtualization Specialist</p></div><p class="exp-period">2019 – 2021</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">Microsoft 365</span>
-          <span class="tech">Microsoft Exchange</span>
-          <span class="tech">Active Directory</span>
-          <span class="tech">CyberArk</span>
-          <span class="tech">Veeam</span>
-          <span class="tech">Symantec</span>
-        </div>
+        <div class="techs"><span class="tech">Microsoft 365</span><span class="tech">Microsoft Exchange</span><span class="tech">Active Directory</span><span class="tech">CyberArk</span><span class="tech">Veeam</span><span class="tech">Symantec</span></div>
       </div>
 
       <div class="card exp-card" style="margin-bottom:18px;">
-        <div class="exp-head">
-          <div>
-            <h3>DenizBank Inc</h3>
-            <p class="exp-role">System Administrator</p>
-          </div>
-          <p class="exp-period">2017 – 2019</p>
-        </div>
+        <div class="exp-head"><div><h3>DenizBank Inc</h3><p class="exp-role">System Administrator</p></div><p class="exp-period">2017 – 2019</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">Enterprise Infrastructure</span>
-          <span class="tech">VIP Support</span>
-        </div>
+        <div class="techs"><span class="tech">Enterprise Infrastructure</span><span class="tech">VIP Support</span></div>
       </div>
 
       <div class="card exp-card">
-        <div class="exp-head">
-          <div>
-            <h3>Acıbadem Healthcare Group</h3>
-            <p class="exp-role">Information Technology Specialist</p>
-          </div>
-          <p class="exp-period">2013 – 2016</p>
-        </div>
+        <div class="exp-head"><div><h3>Acıbadem Healthcare Group</h3><p class="exp-role">Information Technology Specialist</p></div><p class="exp-period">2013 – 2016</p></div>
         <div class="tech-title">Technologies</div>
-        <div class="techs">
-          <span class="tech">Enterprise Infrastructure</span>
-          <span class="tech">Windows Systems</span>
-          <span class="tech">Operational Support</span>
-        </div>
+        <div class="techs"><span class="tech">Enterprise Infrastructure</span><span class="tech">Windows Systems</span><span class="tech">Operational Support</span></div>
       </div>
     </div>
   </section>
@@ -579,16 +453,8 @@
     <div class="container section-inner">
       <div class="card recruiter-box">
         <h2 class="section-title" style="margin-bottom:14px;">For Recruiters</h2>
-        <p>
-          I specialize in Hybrid Infrastructure, Azure, Microsoft 365 and large-scale migration programs.
-          I help organizations modernize infrastructure, improve reliability and implement secure
-          enterprise environments.
-        </p>
-        <p>
-          If you are hiring for roles involving Azure, Microsoft 365, infrastructure transformation or
-          enterprise migrations, feel free to reach out. I am open to international opportunities and
-          remote engagements.
-        </p>
+        <p>I specialize in Hybrid Infrastructure, Azure, Microsoft 365 and large-scale migration programs. I help organizations modernize infrastructure, improve reliability and implement secure enterprise environments.</p>
+        <p>If you are hiring for roles involving Azure, Microsoft 365, infrastructure transformation or enterprise migrations, feel free to reach out. I am open to international opportunities and remote engagements.</p>
       </div>
     </div>
   </section>
@@ -597,45 +463,45 @@
     <div class="container section-inner">
       <h2 class="section-title">Contact</h2>
       <div class="contact-grid">
-        <div class="card contact-card">
-          <small>Email</small>
-          <a href="mailto:sefer@seferunuvar.com">sefer@seferunuvar.com</a>
-        </div>
-        <div class="card contact-card">
-          <small>Phone</small>
-          <span>+971 50 585 9064</span>
-        </div>
-        <div class="card contact-card">
-          <small>Location</small>
-          <span>Dubai, UAE</span>
-        </div>
-        <div class="card contact-card">
-          <small>LinkedIn</small>
-          <a href="https://www.linkedin.com/in/sefer-%C3%BCn%C3%BCvar-2a8a59ab/">linkedin.com/in/sefer-unuvar</a>
-        </div>
+        <div class="card contact-card"><small>Email</small><a href="mailto:sefer@seferunuvar.com">sefer@seferunuvar.com</a></div>
+        <div class="card contact-card"><small>Phone</small><span>+971 50 585 9064</span></div>
+        <div class="card contact-card"><small>Location</small><span>Dubai, UAE</span></div>
+        <div class="card contact-card"><small>LinkedIn</small><a href="https://www.linkedin.com/in/sefer-%C3%BCn%C3%BCvar-2a8a59ab/">linkedin.com/in/sefer-unuvar</a></div>
       </div>
-
-      <p class="contact-note">
-        Open to international infrastructure and cloud opportunities. Always happy to connect with teams working on large-scale platforms and migration initiatives.
-      </p>
+      <p class="contact-note">Open to international infrastructure and cloud opportunities. Always happy to connect with teams working on large-scale platforms and migration initiatives.</p>
     </div>
   </section>
 
+  <div class="copyright">© 2025 Sefer Ünüvar. All rights reserved.</div>
+
   <script>
-    const links = document.querySelectorAll('#nav a');
-    const sections = ['work','experience','resume','contact'].map(id => document.getElementById(id));
+    const navLinks = Array.from(document.querySelectorAll('#nav a'));
+    const navMap = Object.fromEntries(navLinks.map(link => [link.dataset.id, link]));
+    const trackIds = ['work', 'experience', 'resume', 'contact'];
+    const trackSections = trackIds
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          links.forEach(link => {
-            link.classList.toggle('active', link.dataset.id === entry.target.id);
-          });
+    function setActive(id) {
+      navLinks.forEach(link => link.classList.toggle('active', link.dataset.id === id));
+    }
+
+    function updateActiveSection() {
+      const triggerY = window.scrollY + 140;
+      let current = 'work';
+
+      for (const section of trackSections) {
+        if (triggerY >= section.offsetTop) {
+          current = section.id;
         }
-      });
-    }, { rootMargin: '-35% 0px -45% 0px', threshold: 0.15 });
+      }
 
-    sections.forEach(section => section && observer.observe(section));
+      setActive(current);
+    }
+
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('load', updateActiveSection);
+    window.addEventListener('resize', updateActiveSection);
   </script>
 </body>
 </html>
