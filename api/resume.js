@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   const referer = req.headers['referer'] || 'Direct';
 
   const payload = {
-    from: 'Resume Tracker <onboarding@resend.dev>',
+    from: 'from: 'Resume Tracker <resume@send.seferunuvar.com>',
     to: 'sefer@seferunuvar.com',
     subject: 'Resume downloaded',
     html: `
