@@ -33,6 +33,18 @@ export default async function handler(req, res) {
     console.error('Email send failed:', error);
   }
 
-  res.writeHead(302, { Location: '/Sefer-Unuvar-CV.pdf' });
-  res.end();
+  const pdfUrl = new URL('/Sefer-Unuvar-CV.pdf', `https://${req.headers.host}`);
+  const pdfResponse = await fetch(pdfUrl);
+
+  if (!pdfResponse.ok) {
+    res.status(pdfResponse.status).send('CV file not found');
+    return;
+  }
+
+  const arrayBuffer = await pdfResponse.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'attachment; filename="Sefer-Unuvar-CV.pdf"');
+  res.status(200).send(buffer);
 }
